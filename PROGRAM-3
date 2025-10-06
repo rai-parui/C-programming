@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{int integer;
+float sum=0;
+for(int i=1;i<=5;i++)
+{
+    printf("\nEnter integer:");
+    scanf("%d",&integer);
+    sum=sum+integer;
+    
+}
+
+    printf("\nThe average is %.2f:",sum/5);
+
+    return 0;
+}
