@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    int num1,num2;
+    printf("\nEnter 1st number:");
+    scanf("%d",&num1);
+    
+    printf("\nEnter 2nd number:");
+    scanf("%d",&num2);
+    printf("\nBefore swapping:\n");
+    printf("1st number:%d \t 2nd number:%d",num1,num2);
+   
+    printf("\nAfter swapping:");
+    printf("\n1st number:%d \t 2nd number:%d",num2,num1);
+    return 0;
+}
