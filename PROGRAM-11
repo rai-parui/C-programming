@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+    int numFemale,numMale;
+    int ratio;
+    printf("\nEnter the number of females: ");
+    scanf("%d",&numFemale);
+    printf("\nEnter the number of males: ");
+    scanf(" %d",&numMale);
+    ratio=(numFemale/numMale);
+    printf("\nThe gender ratio (females to males)  is: %d ",ratio);
+    return 0;
+}
