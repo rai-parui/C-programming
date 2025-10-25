@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+    float weight;
+    float price;
+    char courier;
+    printf("\nEnter the weight of the parcel in kg and enter 'I'for international courier or 'D'for domestic: ");
+    scanf("%f %c",&weight,&courier);
+    
+   
+    if(weight<=5)
+    price=weight*800;
+    if(weight>5&&weight<=10)
+    price=5*800+(weight-5)*700;
+    if(weight>10)
+    price=500*weight;
+    if(courier=='I')
+    price=price+1500;
+    printf("\nThe price is:%.4f",price);
+    return 0;
+}
