@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+    unsigned int num;
+    int sum=0,product=1,flag=0;
+    printf("\nEnter a positive integer: ");
+    scanf("%u",&num);
+    while(num!=0)
+    {
+       sum=sum+(num%10);
+       product*=(num%10);
+       flag++;
+       num=num/10;
+    }
+    printf("\nThe number of digits is:%d ",flag);
+    printf("\nThe sum of digits is:%d ",sum);
+    printf("\nThe product of digits is:%d ",product);
+    return 0;
+}
