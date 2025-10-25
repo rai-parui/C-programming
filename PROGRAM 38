@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    unsigned int num;
+    int sum=0; 
+    printf("\nEnter a positive integer: ");
+    scanf("%u",&num);
+    for(int divisor=1;divisor<=(num/2);divisor++)
+    {
+        if(num%divisor==0)
+        {
+            sum+=divisor;
+        }
+        
+    }
+    if(num==sum)
+    printf("\nPerfect number.");
+    else
+    printf("\nNot a perfect number");
+
+    return 0;
+}
