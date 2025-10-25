@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+    
+unsigned int num, root;
+printf("\nEnter a number:\t");
+scanf("%u",&num);
+root=(int)sqrt(num+1);
+if(root*root==num+1)
+printf("\nSunny number.");
+else
+printf("\nNot a sunny number.");
+    return 0;
+}
