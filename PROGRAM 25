@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+    float units,price;
+    printf("\nEnter the number of units: ");
+    scanf("%f",&units);
+    if(units<=100)
+    price=units*2;
+    if(units>100&&units<=300)
+    {
+        price=100*2+(units-100)*3;
+    }
+    if(units>300)
+    {
+        price=units*4;
+        price=price+(25*price/1000);
+    }
+    printf("\nThe price is:%.4f",price);
+    return 0;
+}
