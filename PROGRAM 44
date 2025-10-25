@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+	unsigned int num;
+	int divisor,sum=0;
+	printf("\nEnter a number:\t");
+	scanf("%u",&num);
+	for(divisor=1 ; divisor<=num/2 ; divisor++)
+	{
+		if(num%divisor==0)
+		{
+			sum=sum+divisor;
+		}
+	}
+	if(sum>num)
+	{
+		printf("\nAbundant number.");
+	}
+	else
+		printf("\nNot an abundant number.");
+	return 0;
+}
