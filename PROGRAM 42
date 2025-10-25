@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+     int num;
+    int sum=0,digit,n;
+    printf("\nEnter a number:");
+    scanf(" %d",&num);
+    n=num;
+     do {
+            sum = 0;
+            while (n != 0) 
+            {
+                int d = (int)(n % 10);
+                sum += d * d;
+                n /= 10;
+            }
+            n = sum;
+        } while (sum > 6);
+
+   if(sum==1)
+   printf("\nHappy number.");
+   else
+   printf("\nNot a happy number.");
+    return 0;
+}
