@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+    unsigned int num;
+    int sum=0,temp;
+    printf("\nEnter a number: ");
+    scanf("%u",&num);
+    temp=num;
+    while(num!=0)
+    {
+        sum=sum+(num%10);
+        num/=10;
+    }
+    if(temp%sum==0)
+    printf("\nNiven number.");
+    else
+    printf("\nNot a Niven number.");
+    return 0;
+}
