@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+    int limit;
+    
+    printf("\nEnter the limit of the series: ");
+    scanf("%d",&limit);
+     printf("\n");
+    for(int i=1;i<=limit;i++)
+    {
+       printf("%d\n",i);
+    }
+    return 0;
+}
