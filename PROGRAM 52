@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main()
+{  int num;
+
+    printf("\nEnter the array length: ");
+    scanf("%d",&num);
+    int arr[num];
+    int visited[num];
+    printf("\nEnter %d elements: \n",num);
+    for(int k=0;k<num;k++)
+    {
+        scanf(" %d",&arr[k]);
+    }
+    
+    
+    
+    for (int i = 0; i < num; i++) 
+    {
+        if (visited[i] == 1) 
+        { 
+            continue;
+        }
+
+        int count = 1; 
+        for (int j = i + 1; j < num; j++)
+        {
+            if (arr[i] == arr[j]) 
+            {
+                count++;
+                visited[j] = 1; 
+            }
+        }
+        
+        printf("Element %d: %d times\n", arr[i], count);
+    }
+
+    return 0;
+}
