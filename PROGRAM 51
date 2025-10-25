@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int main()
+{
+    int num;
+    int n1,n2,n3;
+    
+    printf("\nEnter the array length:  ");
+    scanf("%d",&num);
+    int arr[num];
+    printf("\nEnter  %d elements: \n",num);
+    for(int i=0;i<num;i++)
+        {
+            scanf(" %d",&arr[i]);
+        }
+        
+     printf("\nOriginal array: \n");
+    for (int i = 0; i < num; i++) 
+    {
+        printf("%d ", arr[i]);
+    }
+    
+    for(n1=0;n1<num;n1++)
+    
+    {
+    
+        for(n2=n1+1;n2<num;n2++)
+        {
+            if(arr[n1]==arr[n2])
+            {
+                for(n3=n2;n3<num-1;n3++)
+                {
+                    arr[n3]=arr[n3+1];
+                }
+                num--;
+                n2--;
+            }
+        }
+    }
+     
+     printf("\nArray after removing duplicates: \n");
+    for (int i = 0; i < num; i++) 
+    {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
