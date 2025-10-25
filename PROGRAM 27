@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    int balance,withdraw;
+    printf("\nEnter the account balance and withdrawal amount: ");
+    scanf("%d %d",&balance,&withdraw);
+    if(withdraw<balance)
+    {
+        if(withdraw%100==0)
+        {
+            if(balance-withdraw>=500)
+            printf("\nTransaction SUCCESS.");
+            else
+            printf("\nTransaction FAILURE.Remaining balance must be at least 500.");
+        }
+        else
+        printf("\nTransaction FAILURE.The withdrawal amount must be a multiple of 100.");
+    }
+    else
+    printf("\nTransaction FAILURE.The withdrawal amount must be  less than account balance.");
+    return 0;
+}
