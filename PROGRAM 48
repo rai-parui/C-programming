@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main()
+{
+    int n,max,index,sec_max;
+    printf("\nEnter the number of elements to be stored in the array: ");
+    scanf("%d",&n);
+    int arr[n];
+    printf("\nEnter the array elements: ");
+    for(int i=0;i<n;i++)
+    {
+        scanf(" %d",&arr[i]);
+    }
+    max=arr[0];
+    
+    for(int i=1;i<n;i++)
+    {
+        if(arr[i]>max)
+       {
+           max=arr[i];
+           index=i;
+       }
+    }
+   sec_max=arr[0]; 
+    
+    for(int i=0;i<n;i++)
+    {
+        if(i==index)
+        continue;
+        if(arr[i]>sec_max)
+        sec_max=arr[i];
+    }
+    printf("\nThe second highest element in the array is: %d ",sec_max);
+    return 0;
+}
