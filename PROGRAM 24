@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+    int num;
+    printf("\nEnter a number:  ");
+    scanf("%d",&num);
+    if(num>=100&&num<=999)
+    {
+        if(num%3==0)
+       {
+           printf("\nThe number consists of 3 digits and is divisible by 3.");
+       }
+        else
+       {
+           printf("\nThe number  is NOT divisible by 3.");
+       }
+    }
+    else
+    printf("\nThe number DOES NOT consist of 3 digits .");
+    return 0;
+}
