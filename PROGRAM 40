@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    unsigned int num;
+    long long square;
+    int num_digits=0;
+    int flag=0;
+    printf("\nEnter  a positive integer: ");
+    scanf("%u",&num);
+    
+    square=num*num;
+    if(num==1)
+    printf("\n1 is a Kaprekar number.");
+    else
+{
+    for(long long temp=square; temp!=0 ;temp/=10)
+    {
+       num_digits++;
+    }
+    
+    for(int right_digit=1;right_digit<num_digits;right_digit++)
+    {
+        int divisor=pow(10,right_digit);
+        if(divisor==num)
+        {
+            break;
+        }
+        int rightPart=square%divisor;
+        int leftPart=square/divisor;
+        if(rightPart+leftPart==num)
+        {
+            flag++;
+            break;
+        }
+    }
+
+    if(flag==1)
+    printf("\n%u is a Kaprekar number.",num);
+    else
+    printf("\n%u is not a Kaprekar number.",num);
+}
+    return 0;
+}
