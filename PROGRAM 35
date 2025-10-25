@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    int limit;
+    
+    printf("\nEnter the limit: ");
+    scanf("%d",&limit);
+    printf("\n");
+    for(int i=1,j=1;i<=limit;i++)
+    {
+        printf("%d ",j);
+        j=j*2;
+    }
+
+    return 0;
+}
